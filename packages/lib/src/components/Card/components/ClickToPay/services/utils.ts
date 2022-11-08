@@ -21,7 +21,12 @@ function createCheckoutPayloadBasedOnScheme(
                 ? {
                       srcScheme: scheme,
                       srcCorrelationId,
-                      srcTokenReference: environment.toLowerCase().includes('live') ? tokenId : '987654321'
+                      srcTokenReference:
+                          environment.toLowerCase().includes('live') ||
+                          environment.toLowerCase().includes('alpha') ||
+                          environment.toLowerCase().includes('test')
+                              ? tokenId
+                              : '987654321'
                   }
                 : { srcScheme: scheme, srcCheckoutPayload: checkoutResponse.encryptedPayload, srcCorrelationId };
         case 'mc':
