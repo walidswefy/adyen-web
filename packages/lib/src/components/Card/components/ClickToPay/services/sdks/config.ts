@@ -8,7 +8,6 @@ const MC_SDK_PROD = 'https://src.mastercard.com/sdk/srcsdk.mastercard.js';
 
 const getVisaSetttings = ({ dpaLocale = 'en_US', dpaPresentationName = '' }: CustomSdkConfiguration) => ({
     dpaTransactionOptions: {
-        dpaShippingPreference: 'NONE',
         dpaLocale: dpaLocale,
         payloadTypeIndicator: 'NON_PAYMENT',
         customInputData: {

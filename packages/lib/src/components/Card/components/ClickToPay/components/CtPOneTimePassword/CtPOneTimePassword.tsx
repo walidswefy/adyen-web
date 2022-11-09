@@ -39,6 +39,7 @@ const CtPOneTimePassword = (): h.JSX.Element => {
         try {
             await finishIdentityValidation(otp);
         } catch (error) {
+            console.log(error);
             setErrorCode(error?.reason);
             setIsValidatingOtp(false);
         }

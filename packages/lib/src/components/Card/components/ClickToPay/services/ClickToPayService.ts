@@ -137,7 +137,10 @@ class ClickToPayService implements IClickToPayService {
         };
 
         const checkoutSdk = this.sdks.find(sdk => sdk.schemeName === card.scheme);
+
+        console.time('SDK checkout()');
         const checkoutResponse = await checkoutSdk.checkout(checkoutParameters);
+        console.timeEnd('SDK checkout()');
 
         if (checkoutResponse.dcfActionCode !== 'COMPLETE') {
             throw new AdyenCheckoutError(

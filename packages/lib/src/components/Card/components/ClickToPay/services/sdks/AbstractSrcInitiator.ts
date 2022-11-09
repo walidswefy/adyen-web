@@ -116,7 +116,12 @@ export default abstract class AbstractSrcInitiator implements ISrcInitiator {
      * Obtains the masked card and other account profile data associated with the userId.
      */
     public async getSrcProfile(idTokens: string[]): Promise<any> {
-        return await this.schemeSdk.getSrcProfile({ idTokens });
+        try {
+            return await this.schemeSdk.getSrcProfile({ idTokens });
+        } catch (error) {
+            console.log('error', error);
+            throw new SrciError(error, 'getSrcProfile');
+        }
     }
 
     /**
