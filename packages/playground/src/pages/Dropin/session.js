@@ -10,7 +10,7 @@ export async function initSession() {
         returnUrl,
         shopperLocale,
         shopperReference,
-        shopperEmail: 'guilherme.ribeiro-ctp3@adyen.com',
+        shopperEmail: 'guilherme.ribeiro-ctp1@adyen.com',
         countryCode
     });
 

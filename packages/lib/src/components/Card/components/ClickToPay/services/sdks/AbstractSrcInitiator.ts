@@ -108,8 +108,8 @@ export default abstract class AbstractSrcInitiator implements ISrcInitiator {
         try {
             return await this.schemeSdk.initiateIdentityValidation();
         } catch (error) {
-            console.error(error);
-            throw new SrciError(error, 'initiateIdentityValidation');
+            const srciError = new SrciError(error, 'initiateIdentityValidation', this.schemeName);
+            throw srciError;
         }
     }
 
@@ -120,8 +120,9 @@ export default abstract class AbstractSrcInitiator implements ISrcInitiator {
         try {
             return await this.schemeSdk.getSrcProfile({ idTokens });
         } catch (error) {
-            console.log('error', error);
-            throw new SrciError(error, 'getSrcProfile');
+            const srciError = new SrciError(error, 'getSrcProfile', this.schemeName);
+            console.log(JSON.stringify(srciError));
+            throw srciError;
         }
     }
 
