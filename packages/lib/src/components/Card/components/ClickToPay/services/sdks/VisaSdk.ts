@@ -55,9 +55,12 @@ class VisaSdk extends AbstractSrcInitiator {
     public async completeIdentityValidation(otp: string): Promise<SrciCompleteIdentityValidationResponse> {
         try {
             const response = await this.schemeSdk.completeIdentityValidation(otp);
+            console.log(response);
+            debugger;
             return response;
         } catch (err) {
             console.error(err);
+            debugger;
             throw new SrciError(err, 'completeIdentityValidation');
         }
     }
