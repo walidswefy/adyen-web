@@ -56,8 +56,8 @@ import WalletINElement from './WalletIN';
 import OnlineBankingCZElement from './OnlineBankingCZ';
 import OnlineBankingSKElement from './OnlineBankingSK';
 import PayByBank from './PayByBank';
-import PromptPay from "./PromptPay";
-import Duitnow from "./DuitNow";
+import PromptPay from './PromptPay';
+import Duitnow from './DuitNow';
 
 /**
  * Maps each component with a Component element.
@@ -110,14 +110,14 @@ const componentsMap = {
     ratepay_directdebit: RatePayDirectDebit,
     /** Open Invoice */
 
-    /** Wallets */
+    /** wallets */
     amazonpay: AmazonPay,
     applepay: ApplePay,
     googlepay: GooglePay,
     paypal: PayPal,
     paywithgoogle: GooglePay,
     qiwiwallet: QiwiWallet,
-    /** Wallets */
+    /** wallets */
 
     /** Voucher */
     boletobancario: Boleto,
