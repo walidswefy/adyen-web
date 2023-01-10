@@ -20,7 +20,7 @@ const htmlPages = [
     { name: 'QR Codes', id: 'QRCodes' },
     { name: 'Secured Fields', id: 'SecuredFields' },
     { name: 'Vouchers', id: 'Vouchers' },
-    { name: 'Wallets', id: 'wallets' },
+    { name: 'Wallets', id: 'Wallets' },
     { name: 'Result', id: 'Result' }
 ];
 
